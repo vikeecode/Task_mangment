@@ -22,17 +22,17 @@ const ViewPaste = () => {
   return (
     <div>
       <h2>Viewing Paste</h2>
-      <div className="flex flex-row gap-6 place-content-between">
+      <div className="flex flex-row gap-5 place-content-between">
         <input
           type="text"
-          className="p-1 rounded-lg mt-2 w-[66%] pl-3"
+          className="p-1 rounded-lg mt-2 w-[100%] pl-3 md:w-[66%]"
           value={paste.title || ""}
           disabled
         />
       </div>
-      <div className="mt-6">
+      <div className="mt-1 md:mt-4">
         <textarea
-          className="rounded-2xl mt-4 min-w-[500px] p-4"
+          className="rounded-2xl mt-2 min-w-[300px] p-4 md:w-[500px]"
           value={paste.content || ""}
           disabled
           rows={20}
