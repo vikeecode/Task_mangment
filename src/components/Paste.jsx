@@ -25,21 +25,21 @@ const Paste = () => {
   }
 
   return (
-    <div className="border p-2 w-[350px] md:w-[500px]">
+    <div className="border-zinc-800 p-2 w-[70%] md:w-[500px] border">
       <input
         type="text"
-        className="p-2 mr-40 rounded-xl min-w-[320px] mt-2 sm:min-w-[450px]"
+        className="p-2 mr-40 rounded-xl min-w-[300px] mt-2 sm:min-w-[450px]"
         placeholder="Search here"
         value={searchTerm}
         onChange={(e) => setSearchTerm(e.target.value)}
       />
-      <div className="flex flex-col gap-3 mt-3 w-[420px] md:w-[550px]">
+      <div className="flex flex-col gap-3 mt-3 w-[400px] md:w-[550px]">
         {filteredData.length > 0 &&
           filteredData.map((paste) => (
             <div key={paste._id} className="border border-zinc-400 p-4 rounded-md mr-24">
               <div><strong>Title:</strong> {paste.title}</div>
               <div><strong>Content:</strong> {paste.content}</div>
-              <div className="flex flex-col gap-2 w-[300px] mt-2 md:flex-row justify-evenly">
+              <div className="flex flex-col gap-2 w-[270px] mt-2 md:flex-row justify-evenly">
                 <button>
                   <Link to={`/?pasteId=${paste._id}`}>Edit</Link>
                 </button>
